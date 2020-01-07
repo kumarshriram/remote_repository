@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title> delete form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    label{
+        color: green;
+        background-color: red;
+        font-size: 30px;
+
+    }
+    body{
+        background-color: red;
+    }
+   textarea[type-number] {
+       width: 20px;
+       border: 3px ;
+
+
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                <label>Enter Your Product Id</label>
+                <textarea type="number" name="pid"  row="100" cols="200" class="form-control"  placeholder="Enter Your Product Id" required></textarea>
+                <center>
+                    <input type="submit" value="delete" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

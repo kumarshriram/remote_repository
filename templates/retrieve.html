@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title> retrieve Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    thead{
+        border: 30px;
+        color: black;
+        margin: 30px 5px 30px 5px;
+    }
+    th{
+        color: blue;
+        font-size: 30px;
+    }
+    body{
+        background-color: green;
+
+    }
+</style>
+<body>
+{% if data %}
+
+
+<form method="POST">
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+    <th>pid</th>
+    <th>pname</th>
+    <th>pcost</th>
+    <th>pclass</th>
+    <th>npros</th>
+    <th>mdate</th>
+    <th>cname</th>
+    <th>mobile</th>
+    <th>email</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        {% for i in data %}
+            <tr>
+
+            <td>{{i.pid}}</td>
+            <td>{{i.pname}}</td>
+            <td>{{i.pcost}}</td>
+            <td>{{i.pclass}}</td>
+            <td>{{i.npros}}</td>
+            <td>{{i.mdate}}</td>
+            <td>{{i.cname}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.email}}</td>
+            </tr>
+
+        {% endfor %}
+
+
+    </tbody>
+</table>
+    {% else %}
+    <h2> No data available</h2>
+    <a href="/#/" style="margin-right: 50px">home page</a>
+    <a href="/insert/"> go to create page</a>
+{% endif %}
+
+</form>
+</body>
+</html>

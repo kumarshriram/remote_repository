@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title> update form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    label{
+        color: blue;
+        font-size:30px;
+    }
+    body{
+        background-color: yellowgreen;
+
+    }
+</style>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                <label> Enter Your Product id</label>
+                <input type="number" name="pid" class="form-control" placeholder="Enter Your Product id" required>
+                <label>Enter Your  Product Cost </label>
+                <input type="number" name="pcost" class="form-control" placeholder="Enter Your  Product Cost" required>
+                <center>
+                    <input type="submit" value="update" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

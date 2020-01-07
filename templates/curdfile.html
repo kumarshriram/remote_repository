@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style> createform</style>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    label{
+        color: red;
+        font-size:20px;
+    }
+    body{
+        background-color: yellow;
+
+    }
+
+</style>
+<body>
+<form method="POST">
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            {% csrf_token %}
+            <h3>Welcome to curd operation</h3>
+            <label>Enter Your Id:</label>
+            <input type="number" name="pid" class="form-control" placeholder="Enter Your id" required>
+            <label>Enter Your Name:</label>
+            <input type="name" name="pname" class="form-control" placeholder="Enter Your Name" required>
+            <label>Enter Your Product Cost:</label>
+            <input type="name" name="pcost" class="form-control" placeholder="Enter Your Product Cost" required>
+            <label>Enter Your Product Class:</label>
+            <input type="name" name="pclass" class="form-control" placeholder="Enter Your Product Class" required>
+            <label>Enter Your Number of products:</label>
+            <input type="number" name="npros" class="form-control" placeholder="Enter Your Number of products"  required>
+            <label>Enter Your manufacture Date:</label>
+            <input type="date" name="mdate" class="form-control" placeholder="Enter Your id" Enter Your manufacture Date required>
+            <label>Enter Your Expiry Date:</label>
+            <input type="date" name="edate" class="form-control" placeholder="Enter Your Expiry Date" required>
+            <label>Enter Your Customer Name:</label>
+            <input type="name" name="cname" class="form-control" placeholder="Enter Your Customer Name" required>
+            <label>Enter Your Mobile:</label>
+            <input type="number" name="mobile" class="form-control" placeholder="Enter Your Mobile" required>
+            <label>Enter Your Email:</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+            <center>
+                <input type="submit" value="Signup" class="btn btn-success">
+                <input type="reset" value="clear" class="btn btn-danger">
+
+            </center>
+
+        </div>
+
+    </div>
+
+</div>
+    </form>
+</body>
+</html>
